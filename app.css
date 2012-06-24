@@ -1,0 +1,654 @@
+/* Grids.less */
+.container_12 {
+  margin: 0 auto;
+  width: 960px;
+  zoom: 1;
+}
+.container_12:before,
+.container_12:after {
+  clear: both;
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.container_12.show_columns {
+  background-image: -webkit-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -moz-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -ms-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -o-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-position: 10px 0px;
+  background-size: 80px;
+}
+.container_12 .grid_12 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 940px;
+}
+.container_12 .prefix_12 {
+  padding-left: 960px;
+}
+.container_12 .pull_12 {
+  position: relative;
+  left: -960px;
+}
+.container_12 .push_12 {
+  position: relative;
+  left: 960px;
+}
+.container_12 .suffix_12 {
+  padding-right: 960px;
+}
+.container_12 .grid_11 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 860px;
+}
+.container_12 .prefix_11 {
+  padding-left: 880px;
+}
+.container_12 .pull_11 {
+  position: relative;
+  left: -880px;
+}
+.container_12 .push_11 {
+  position: relative;
+  left: 880px;
+}
+.container_12 .suffix_11 {
+  padding-right: 880px;
+}
+.container_12 .grid_10 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 780px;
+}
+.container_12 .prefix_10 {
+  padding-left: 800px;
+}
+.container_12 .pull_10 {
+  position: relative;
+  left: -800px;
+}
+.container_12 .push_10 {
+  position: relative;
+  left: 800px;
+}
+.container_12 .suffix_10 {
+  padding-right: 800px;
+}
+.container_12 .grid_9 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 700px;
+}
+.container_12 .prefix_9 {
+  padding-left: 720px;
+}
+.container_12 .pull_9 {
+  position: relative;
+  left: -720px;
+}
+.container_12 .push_9 {
+  position: relative;
+  left: 720px;
+}
+.container_12 .suffix_9 {
+  padding-right: 720px;
+}
+.container_12 .grid_8 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 620px;
+}
+.container_12 .prefix_8 {
+  padding-left: 640px;
+}
+.container_12 .pull_8 {
+  position: relative;
+  left: -640px;
+}
+.container_12 .push_8 {
+  position: relative;
+  left: 640px;
+}
+.container_12 .suffix_8 {
+  padding-right: 640px;
+}
+.container_12 .grid_7 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 540px;
+}
+.container_12 .prefix_7 {
+  padding-left: 560px;
+}
+.container_12 .pull_7 {
+  position: relative;
+  left: -560px;
+}
+.container_12 .push_7 {
+  position: relative;
+  left: 560px;
+}
+.container_12 .suffix_7 {
+  padding-right: 560px;
+}
+.container_12 .grid_6 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 460px;
+}
+.container_12 .prefix_6 {
+  padding-left: 480px;
+}
+.container_12 .pull_6 {
+  position: relative;
+  left: -480px;
+}
+.container_12 .push_6 {
+  position: relative;
+  left: 480px;
+}
+.container_12 .suffix_6 {
+  padding-right: 480px;
+}
+.container_12 .grid_5 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 380px;
+}
+.container_12 .prefix_5 {
+  padding-left: 400px;
+}
+.container_12 .pull_5 {
+  position: relative;
+  left: -400px;
+}
+.container_12 .push_5 {
+  position: relative;
+  left: 400px;
+}
+.container_12 .suffix_5 {
+  padding-right: 400px;
+}
+.container_12 .grid_4 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 300px;
+}
+.container_12 .prefix_4 {
+  padding-left: 320px;
+}
+.container_12 .pull_4 {
+  position: relative;
+  left: -320px;
+}
+.container_12 .push_4 {
+  position: relative;
+  left: 320px;
+}
+.container_12 .suffix_4 {
+  padding-right: 320px;
+}
+.container_12 .grid_3 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 220px;
+}
+.container_12 .prefix_3 {
+  padding-left: 240px;
+}
+.container_12 .pull_3 {
+  position: relative;
+  left: -240px;
+}
+.container_12 .push_3 {
+  position: relative;
+  left: 240px;
+}
+.container_12 .suffix_3 {
+  padding-right: 240px;
+}
+.container_12 .grid_2 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 140px;
+}
+.container_12 .prefix_2 {
+  padding-left: 160px;
+}
+.container_12 .pull_2 {
+  position: relative;
+  left: -160px;
+}
+.container_12 .push_2 {
+  position: relative;
+  left: 160px;
+}
+.container_12 .suffix_2 {
+  padding-right: 160px;
+}
+.container_12 .grid_1 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 60px;
+}
+.container_12 .prefix_1 {
+  padding-left: 80px;
+}
+.container_12 .pull_1 {
+  position: relative;
+  left: -80px;
+}
+.container_12 .push_1 {
+  position: relative;
+  left: 80px;
+}
+.container_12 .suffix_1 {
+  padding-right: 80px;
+}
+.container_12 .alpha {
+  margin-left: 0;
+}
+.container_12 .omega {
+  margin-right: 0;
+}
+/* Responsive-ness via media queries */
+@media only screen and (min-width: 1px) and (max-width: 959px) {
+  body {
+    min-width: 300px;
+  }
+  [class*="container"] {
+    width: 300px !important;
+  }
+  [class*="container"] [class*="grid"],
+  [class*="container"] [class*="prefix"],
+  [class*="container"] [class*="pull"],
+  [class*="container"] [class*="push"],
+  [class*="container"] [class*="suffix"] {
+    display: block;
+    float: none;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  body {
+    min-width: 480px;
+  }
+  [class*="container"] {
+    width: 480px !important;
+  }
+}
+@media only screen and (min-width: 740px) {
+  body {
+    min-width: 740px;
+  }
+  [class*="container"] {
+    width: 740px !important;
+  }
+}
+@media only screen and (min-width: 960px) {
+  body {
+    min-width: 960px;
+  }
+  [class*="container"] {
+    width: 960px !important;
+  }
+}
+html {
+  margin: 0 auto;
+  width: 960px;
+  zoom: 1;
+  background: linen;
+}
+html:before,
+html:after {
+  clear: both;
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+html.show_columns {
+  background-image: -webkit-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -moz-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -ms-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: -o-linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-image: linear-gradient(0, transparent 60px, rgba(0, 0, 0, 0.07) 60px);
+  background-position: 10px 0px;
+  background-size: 80px;
+}
+html .grid_12 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 940px;
+}
+html .prefix_12 {
+  padding-left: 960px;
+}
+html .pull_12 {
+  position: relative;
+  left: -960px;
+}
+html .push_12 {
+  position: relative;
+  left: 960px;
+}
+html .suffix_12 {
+  padding-right: 960px;
+}
+html .grid_11 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 860px;
+}
+html .prefix_11 {
+  padding-left: 880px;
+}
+html .pull_11 {
+  position: relative;
+  left: -880px;
+}
+html .push_11 {
+  position: relative;
+  left: 880px;
+}
+html .suffix_11 {
+  padding-right: 880px;
+}
+html .grid_10 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 780px;
+}
+html .prefix_10 {
+  padding-left: 800px;
+}
+html .pull_10 {
+  position: relative;
+  left: -800px;
+}
+html .push_10 {
+  position: relative;
+  left: 800px;
+}
+html .suffix_10 {
+  padding-right: 800px;
+}
+html .grid_9 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 700px;
+}
+html .prefix_9 {
+  padding-left: 720px;
+}
+html .pull_9 {
+  position: relative;
+  left: -720px;
+}
+html .push_9 {
+  position: relative;
+  left: 720px;
+}
+html .suffix_9 {
+  padding-right: 720px;
+}
+html .grid_8 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 620px;
+}
+html .prefix_8 {
+  padding-left: 640px;
+}
+html .pull_8 {
+  position: relative;
+  left: -640px;
+}
+html .push_8 {
+  position: relative;
+  left: 640px;
+}
+html .suffix_8 {
+  padding-right: 640px;
+}
+html .grid_7 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 540px;
+}
+html .prefix_7 {
+  padding-left: 560px;
+}
+html .pull_7 {
+  position: relative;
+  left: -560px;
+}
+html .push_7 {
+  position: relative;
+  left: 560px;
+}
+html .suffix_7 {
+  padding-right: 560px;
+}
+html .grid_6 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 460px;
+}
+html .prefix_6 {
+  padding-left: 480px;
+}
+html .pull_6 {
+  position: relative;
+  left: -480px;
+}
+html .push_6 {
+  position: relative;
+  left: 480px;
+}
+html .suffix_6 {
+  padding-right: 480px;
+}
+html .grid_5 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 380px;
+}
+html .prefix_5 {
+  padding-left: 400px;
+}
+html .pull_5 {
+  position: relative;
+  left: -400px;
+}
+html .push_5 {
+  position: relative;
+  left: 400px;
+}
+html .suffix_5 {
+  padding-right: 400px;
+}
+html .grid_4 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 300px;
+}
+html .prefix_4 {
+  padding-left: 320px;
+}
+html .pull_4 {
+  position: relative;
+  left: -320px;
+}
+html .push_4 {
+  position: relative;
+  left: 320px;
+}
+html .suffix_4 {
+  padding-right: 320px;
+}
+html .grid_3 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 220px;
+}
+html .prefix_3 {
+  padding-left: 240px;
+}
+html .pull_3 {
+  position: relative;
+  left: -240px;
+}
+html .push_3 {
+  position: relative;
+  left: 240px;
+}
+html .suffix_3 {
+  padding-right: 240px;
+}
+html .grid_2 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 140px;
+}
+html .prefix_2 {
+  padding-left: 160px;
+}
+html .pull_2 {
+  position: relative;
+  left: -160px;
+}
+html .push_2 {
+  position: relative;
+  left: 160px;
+}
+html .suffix_2 {
+  padding-right: 160px;
+}
+html .grid_1 {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 60px;
+}
+html .prefix_1 {
+  padding-left: 80px;
+}
+html .pull_1 {
+  position: relative;
+  left: -80px;
+}
+html .push_1 {
+  position: relative;
+  left: 80px;
+}
+html .suffix_1 {
+  padding-right: 80px;
+}
+html .alpha {
+  margin-left: 0;
+}
+html .omega {
+  margin-right: 0;
+}
+html body {
+  background: white;
+  zoom: 1;
+  font-size: 140%;
+  line-height: 1.7em;
+}
+html body:before,
+html body:after {
+  display: table;
+  content: "";
+}
+html body:after {
+  clear: both;
+}
+html body section {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  width: 940px;
+  padding: 1em;
+}
+span {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  line-height: 1em;
+  margin-bottom: 0.3em;
+  padding: 0px 1em;
+  position: relative;
+}
+span.empty {
+  width: 60px;
+}
+span input {
+  background: transparent;
+  border: 0px;
+  font-size: inherit;
+  outline: none;
+}

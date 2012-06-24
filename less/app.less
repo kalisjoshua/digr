@@ -1,0 +1,40 @@
+@import "anygrid";
+@import "helpers";
+
+html {
+    .container_12;
+
+    background: linen;
+
+    body {
+        background: white;
+        .clearfix();
+        font-size: 140%;
+        line-height: 1.7em;
+
+        section {
+            #grid > #system > #grid(12, @standard_gutter, @max_width, 12);
+            padding: 1em;
+        }
+    }
+}
+
+span {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    line-height: 1em;
+    margin-bottom: 0.3em;
+    padding: 0px 1em;
+    position: relative;
+
+    &.empty {
+        width: 60px;
+    }
+
+    input {
+        background: transparent;
+        border: 0px;
+        font-size: inherit;
+        outline: none;
+    }
+}
