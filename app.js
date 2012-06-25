@@ -7,10 +7,20 @@
 ;(function () {
     var
          nbsp  = "&nbsp;"
-        ,rnbsp = /^(?:&nbsp;)$/i;
+        ,rnbsp = /^(?:&nbsp;)*$/i;
 
     function blur (event) {
         $.publish("field.close", [$(this)]);
+    }
+
+    function emptyLists() {
+        $("ul")
+            .children()
+            .filter(function () {return !$(this).find("span").html().replace(rnbsp, "").length;})
+            .remove()
+            .end()
+            .filter(function () {return $(this).children().length === 0})
+            .remove();
     }
 
     function input (span) {
@@ -60,15 +70,9 @@
         var span = editor
             .parent()
             .html(editor.val() || nbsp)
-            .addClass("empty", rnbsp.test(editor.val()));
+            .toggleClass("empty", rnbsp.test(editor.val()));
 
-        if (!editor.val() && span.parents("ul").length) {
-            span
-                .parents("ul")
-                .children()
-                .filter(function () {return !$(this).find("span").html().replace(rnbsp, "").length;})
-                .remove();
-        }
+        emptyLists();
     });
 
     $.subscribe("field.open", function (event, span) {
@@ -83,6 +87,8 @@
                 .html(editor);
 
             editor.focus();
+
+            emptyLists();
         }
     });
 
