@@ -1,4 +1,12 @@
 var digr = (function () {
+    function tabNav (obj, forward) {
+        var collection = $(obj[0].tagName);
+
+        collection
+            .eq(([-1, 1][+!forward]) + collection.index(obj))
+            .click();
+    }
+
     return {
         input: function (span) {
             span = span.html().replace(/&nbsp;/gi, "");
@@ -12,16 +20,15 @@ var digr = (function () {
                     var self = $(this)
                         .attr("size", 1 + (this.value.length || 1));
 
-                    // if (event.keyCode === 9) {
-                    //     self
-                    //         // .parents("div")
-                    //         // .siblings()
-                    //         // [["first", "last"][+!event.shiftKey]]()
-                    //         // .find("span")
-                    //         // .trigger("click");
+                    if (event.keyCode === 9) {
+                        self.val() && $.publish("field.addChild", [self.parents("li")]);
 
-                    //     event.preventDefault();
-                    // }
+                        tabNav(self.parent(), event.shiftKey);
+
+                        self.blur();
+
+                        event.preventDefault();
+                    }
                 })
                 .val(span);
         }
@@ -32,21 +39,14 @@ $.fn.ready(function () {
     $("span")
         .addClass("empty")
         .html("&nbsp;")
-        .on("click", function () {
+        .live("click", function () {
             $.publish("field.open", [$(this)]);
         });
 
     $("li")
         .on("click", function (event) {
-            var target = $(event.target);
-
             if (event.altKey) {
-                !target.find("ul").length && target.append("<ul>");
-
-                target
-                    .find("ul")
-                    .first()
-                    .append("<li>dig deep!");
+                $.publish("field.addChild", [$(event.target)]);
 
                 event.preventDefault();
             }
@@ -57,6 +57,16 @@ $.fn.ready(function () {
  * http://benalman.com/
  * Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
 (function(a){var b=a({});a.subscribe=function(){b.on.apply(b,arguments)},a.unsubscribe=function(){b.off.apply(b,arguments)},a.publish=function(){b.trigger.apply(b,arguments)}})(jQuery)
+
+$.subscribe("field.addChild", function (event, target) {
+    console.log(target)
+    !target.find("ul").length && target.append("<ul>");
+
+    target
+        .find("ul")
+        .first()
+        .append("<li><span>&nbsp;");
+});
 
 $.subscribe("field.close", function (event, editor) {
     editor
@@ -77,5 +87,5 @@ $.subscribe("field.open", function (event, span) {
     }
 });
 
-// wyandotte medical
+// wyandotte general
 // room 351
