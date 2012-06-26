@@ -2,19 +2,26 @@
 @import "helpers";
 
 html {
-    .container_12;
-
     background: linen;
 
     body {
+        #grid > #system > #container();
         background: white;
         .clearfix();
         font-size: 140%;
         line-height: 1.7em;
 
         section {
-            #grid > #system > #grid(12, @standard_gutter, @max_width, 12);
+            #grid > #system > #grid(12, 12);
             padding: 1em;
+
+            ol > li {
+                cursor: pointer;
+
+                span {
+                    cursor: text;
+                }
+            }
         }
     }
 }

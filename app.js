@@ -6,21 +6,13 @@
 
 ;(function () {
     var
-         nbsp  = "&nbsp;"
+         emptyListItems = function () {return !$(this).find("span").html().replace(rnbsp, "").length;}
+        ,emptyLists = function () {return $(this).children().length === 0}
+        ,nbsp  = "&nbsp;"
         ,rnbsp = /^(?:&nbsp;)*$/i;
 
     function blur (event) {
         $.publish("field.close", [$(this)]);
-    }
-
-    function emptyLists() {
-        $("ul")
-            .children()
-            .filter(function () {return !$(this).find("span").html().replace(rnbsp, "").length;})
-            .remove()
-            .end()
-            .filter(function () {return $(this).children().length === 0})
-            .remove();
     }
 
     function input (span) {
@@ -53,6 +45,16 @@
             .eq(vector(forward) + collection.index(obj));
     }
 
+    function removeEmptyLists() {
+        $("ul")
+            .children()
+            .filter(emptyListItems)
+            .remove()
+            .end()
+            .filter(emptyLists)
+            .remove();
+    }
+
     function vector (bool) {
         return [-1, 1][+bool];
     }
@@ -63,7 +65,7 @@
         target
             .find("ul")
             .first()
-            .append("<li><span>" + nbsp);
+            .prepend("<li><span>" + nbsp);
     });
 
     $.subscribe("field.close", function (event, editor) {
@@ -72,7 +74,7 @@
             .html(editor.val() || nbsp)
             .toggleClass("empty", rnbsp.test(editor.val()));
 
-        emptyLists();
+        removeEmptyLists();
     });
 
     $.subscribe("field.open", function (event, span) {
@@ -88,7 +90,7 @@
 
             editor.focus();
 
-            emptyLists();
+            removeEmptyLists();
         }
     });
 
@@ -100,14 +102,15 @@
                 $.publish("field.open", [$(this)]);
             });
 
-        // $("li")
-        //     .on("click", function (event) {
-        //         if (event.altKey) {
-        //             $.publish("field.addChild", [$(event.target)]);
-
-        //             event.preventDefault();
-        //         }
-        //     });
+        $("ol")
+            .children()
+            .on("dblclick", function (event) {
+                // event.altKey &&
+                    $(this)
+                        .find("ul")
+                        .first()
+                        .slideToggle();
+            });
     });
 }());
 
